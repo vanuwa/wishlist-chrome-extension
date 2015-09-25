@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Wishlist",
-  "version": "0.0.1.0",
+  "version": "0.0.0.1",
 
   "default_locale": "en",
   "description": "Product wishlist to purchase later",
@@ -18,13 +18,13 @@
 
   "author": "Brave Crew",
   "background": {
-    "scripts": [ "js/background.js" ],
+    "scripts": [ "js/background.js", "js/storage.js" ],
     "persistent": false
   },
 
   "content_scripts": [{
     "matches": [ "http://*/*", "https://*/*" ],
-    "css": [ "css/crawler.js" ],
+    "css": [ "css/crawler.css" ],
     "js": [ "js/jquery-2.1.4.js", "js/crawler.js" ]
   }],
 
