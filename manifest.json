@@ -10,6 +10,8 @@
     "128": "images/icon128.png"
   },
 
+  "permissions": [ "tabs", "activeTab", "contextMenus", "http://*/*", "https://*/*" ],
+
   "browser_action": {
     "default_icon": { "19": "images/icon19.png" }
   },
@@ -19,6 +21,12 @@
     "scripts": [ "js/background.js" ],
     "persistent": false
   },
+
+  "content_scripts": [{
+    "matches": [ "http://*/*", "https://*/*" ],
+    "css": [ "css/crawler.js" ],
+    "js": [ "js/jquery-2.1.4.js", "js/crawler.js" ]
+  }],
 
   "options_page": "options.html",
 
